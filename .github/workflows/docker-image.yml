@@ -28,4 +28,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - 
         name: Build the image
-        run: docker buildx build --platform=linux/amd64,linux/arm64 --build-arg VERSION=3.96 -t vikmstr/upx -o type=registry .
+        run: docker buildx build --platform=linux/amd64,linux/arm64 --build-arg VERSION=3.96 -t vikmstr/upx:latest -t vikmstr/upx:3.96 -t vikmstr/upx:3 -o type=registry .
